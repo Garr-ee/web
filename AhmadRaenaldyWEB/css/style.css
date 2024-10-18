@@ -1,0 +1,197 @@
+/* Mengatur box-sizing agar padding dan border dihitung dalam ukuran elemen */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Font sederhana dengan background warna biru laut yang lembut */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #d0e7f9;
+    color: #333;
+}
+
+/* Mengatur layout flexbox agar kotak login berada di tengah layar */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Kotak login dengan bentuk modern, sudut melengkung kecil, bayangan lembut, dan efek hover */
+.login-box {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Sudut tidak terlalu melengkung */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.login-box:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Desain judul form login */
+.login-box h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Desain input dan select dengan border lembut, sudut lebih kecil */
+input, select {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #99cfe0;
+    border-radius: 8px; /* Sudut lebih kecil */
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: #f7faff;
+}
+
+input:focus, select:focus {
+    border-color: #0277bd;
+}
+
+/* Tombol submit dengan warna biru laut yang lebih tegas */
+input[type=submit] {
+    background-color: #0277bd;
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 8px; /* Sudut lebih kecil */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type=submit]:hover {
+    background-color: #005fa3;
+}
+
+/* Header dengan desain minimalis dan warna biru laut */
+header {
+    background-color: #0288d1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom-left-radius: 15px; /* Sudut melengkung hanya di bawah */
+    border-bottom-right-radius: 15px;
+}
+
+/* Menu samping dengan desain sederhana */
+aside {
+    flex: 20%;
+    background-color: #01579b;
+    color: white;
+    padding: 20px;
+    border-radius: 0; /* Menghilangkan lengkungan pada menu samping */
+}
+
+/* Konten utama dengan background putih dan bayangan lembut */
+section.main {
+    flex: 80%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px; /* Sudut melengkung kecil */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer dengan desain minimalis */
+footer {
+    background-color: #e0f7fa;
+    color: #666;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Menu samping dengan hover dan transisi yang halus */
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 12px;
+}
+
+.menu a {
+    color: white;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    border-radius: 8px; /* Sudut lebih kecil */
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #033e71;
+}
+
+/* Tabel dengan border sederhana dan warna biru */
+.table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px; /* Sudut lebih kecil */
+    overflow: hidden;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 16px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #0288d1;
+    color: white;
+}
+
+/* Desain tombol dengan efek hover yang simpel */
+.tombol {
+    display: inline-block;
+    padding: 12px 30px;
+    color: white;
+    background-color: #0277bd;
+    border-radius: 8px; /* Sudut lebih kecil */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.tombol:hover {
+    background-color: #01579b;
+}
+
+/* Form dengan label dan input yang sederhana */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-group .input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px; /* Sudut lebih kecil */
+    border: 1px solid #ccc;
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 700px) {
+    .form-group label, .form-group .input {
+        width: 100%;
+    }
+}

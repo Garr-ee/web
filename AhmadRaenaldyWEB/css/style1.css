@@ -1,0 +1,149 @@
+/* Mengatur font dan margin */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d0e9f2; /* Warna biru laut lebih lembut */
+    line-height: 1.6;
+    opacity: 0; /* Memulai dengan transparan untuk animasi fade-in */
+    animation: fadeIn 1.5s ease-in forwards; /* Animasi saat halaman dimuat */
+}
+
+/* Keyframes untuk animasi fade-in */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Mengubah opacity ke 1 setelah animasi selesai */
+    }
+}
+
+/* Header dengan background biru laut, sudut melengkung, dan bayangan ringan */
+header {
+    background: linear-gradient(135deg, #1e81b0, #81c3d7); /* Warna biru laut dan biru lebih terang */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100px); /* Memulai header dari atas */
+    animation: slideDown 1.2s ease-out forwards; /* Menambahkan animasi turun */
+}
+
+/* Keyframes untuk animasi slide-down pada header */
+@keyframes slideDown {
+    to {
+        transform: translateY(0); /* Memindahkan header ke posisi semula */
+    }
+}
+
+/* Navigasi dengan elemen sederhana dan transisi halus */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    opacity: 0; /* Memulai dengan hilang */
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    animation-delay: 0.5s; /* Penundaan animasi */
+}
+
+/* Keyframes untuk animasi fade-in-up pada navigasi */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Memindahkan elemen ke posisi awal */
+    }
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Animasi garis bawah dengan desain lebih minimal */
+header nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s;
+    margin-top: 4px;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Seksi konten dengan kotak melengkung sederhana dan bayangan lembut */
+section {
+    padding: 50px 30px;
+    text-align: center;
+    background-color: #f0faff; /* Warna dasar biru yang lebih terang */
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Awalnya hilang */
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.7s; /* Penundaan untuk menunggu header selesai */
+}
+
+/* Desain container yang lebih simpel dengan margin tengah */
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Animasi tombol yang lebih hidup */
+button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px; /* Sudut lebih kecil */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transisi untuk hover dan klik */
+}
+
+button:hover {
+    background-color: #156fbd;
+    transform: translateY(-3px); /* Efek naik sedikit saat di hover */
+}
+
+button:active {
+    transform: translateY(0); /* Kembali ke posisi semula saat diklik */
+}
+
+/* Animasi pada tabel */
+.table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px; /* Sudut lebih kecil */
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.8s; /* Penundaan agar elemen lain selesai */
+}
+
+/* Keyframes untuk fade-in pada tabel */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
